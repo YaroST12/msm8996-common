@@ -53,6 +53,10 @@ on init
     chown system graphics /sys/devices/virtual/graphics/fb0/idle_time
     write /sys/devices/virtual/graphics/fb0/idle_time 100
 
+    # Hack for oreo camera blobs
+    mount none /system/lib/libbinder.so /system/lib/vndk-28/libbinder.so bind
+    mount none /system/lib/libcutils.so /system/lib/vndk-sp-28/libcutils.so bind
+
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
