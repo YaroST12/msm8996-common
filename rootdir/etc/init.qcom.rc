@@ -651,3 +651,6 @@ on property:vold.decrypt=trigger_restart_min_framework
 
 on property:vold.decrypt=trigger_restart_framework
     start audio-hal-2-0
+
+on property:vendor.post_boot.parsed=*
+    setprop sys.post_boot.parsed ${vendor.post_boot.parsed}
