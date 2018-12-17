@@ -159,6 +159,20 @@ on post-fs-data
     chmod 0664 /persist/sensors/sensors_settings
     chown root system /persist/sensors/sns.reg
     chmod 0664 /persist/sensors/sns.reg
+    mkdir /persist/drm 0775 root system
+    mkdir /persist/bluetooth 0775 root bluetooth
+    mkdir /persist/misc 0775 root system
+    mkdir /persist/alarm 0775 root system
+    mkdir /persist/time 0775 root system
+    mkdir /persist/data 0775 root system
+    mkdir /persist/data/sfs 0775 root system
+    mkdir /persist/data/tz 0775 root system
+    mkdir /persist/qc_senseid 0775 root system
+    mkdir /persist/bms 0775 root system
+    mkdir /persist/wlan_bt 0775 root system
+    mkdir /persist/audio 0777 root audio
+    mkdir /persist/display 0775 root graphics
+    restorecon_recursive /persist
 
     # /dev/sensors only supports an ioctl to get the current SLPI timestamp;
     # allow the sensors daemon to perform this as non-root
@@ -274,21 +288,6 @@ on boot
     chmod 2770 /dev/socket/qmux_bluetooth
     mkdir /dev/socket/qmux_gps 0770 gps gps
     chmod 2770 /dev/socket/qmux_gps
-
-    mkdir /persist/drm 0770 system system
-    mkdir /persist/bluetooth 0770 bluetooth bluetooth
-    mkdir /persist/misc 0770 system system
-    mkdir /persist/alarm 0770 system system
-    mkdir /persist/time 0770 system system
-    mkdir /persist/data 0700 system system
-    mkdir /persist/data/sfs 0700 system system
-    mkdir /persist/data/tz 0700 system system
-    mkdir /persist/qc_senseid 0700 system system
-    mkdir /persist/bms 0700 root system
-    mkdir /persist/wlan_bt 0770 system system
-    mkdir /persist/audio 0777 media audio
-    mkdir /persist/display 0770 system graphics
-    restorecon_recursive /persist
 
     # Create NETMGR daemon socket area
     mkdir /dev/socket/netmgr 0750 radio radio
