@@ -726,11 +726,11 @@ vendor/lib/libsensor1.so
 vendor/lib/libsensor_reg.so
 vendor/lib/sensors.ssc.so
 
-# Thermal - from bardock-pro - OPM1.171019.026
-vendor/bin/thermal-engine|40990b4c75dcb7d354e9bd768b387224bfe79bfd
--vendor/lib64/libthermalclient.so|5b5dcfc714a31a65e1757ef786e697b1a69e012e
-vendor/lib64/libthermalioctl.so|96cdd452d6ca70256b8621ec5ae8ac2ba0292260
--vendor/lib/libthermalclient.so|5e77723f69df323a85360c39722b8da00297ba9a
+# Thermal - from daisy_sprout - PKQ1.180917.001
+vendor/bin/thermal-engine|e24c041613a4a522e15d54f700e1d1befe7e171e
+-vendor/lib/libthermalclient.so|390eda2d80df6825c09eb504f0630650ea2d30f7
+-vendor/lib64/libthermalclient.so|796c3e071fe9d6fa57598e1205a762cb55720f88
+vendor/lib64/libthermalioctl.so|5c126fa39bd8fbdb456c661be36e16ae5c6c3ec0
 
 # Time services - from LA.UM.7.2.r1-04000-sdm660.0 - B2N_sprout:9/PPR1.180610.011/00WW_3_22C
 -vendor/app/TimeService/TimeService.apk|25337e4160093a998c0e4cfced1c1a6c51177dff
