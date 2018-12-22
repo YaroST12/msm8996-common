@@ -40,6 +40,9 @@ on early-init
     write /proc/sys/vm/page-cluster 0
 
 on init
+    # Set permissions for persist partition
+    mkdir /persist 0771 root system
+
     # Create cgroup mount point for memory
     mkdir /sys/fs/cgroup/memory/bg 0750 root system
     write /sys/fs/cgroup/memory/bg/memory.swappiness 140
