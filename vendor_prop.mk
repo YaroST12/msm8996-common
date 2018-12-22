@@ -111,6 +111,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	dalvik.vm.heapstartsize=16m \
 	dalvik.vm.heaptargetutilization=0.75
 
+# Memory optimizations
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.qti.sys.fw.bservice_enable=true
+
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
