@@ -288,7 +288,9 @@ on boot
     mkdir /persist/wlan_bt 0770 system system
     mkdir /persist/audio 0777 media audio
     mkdir /persist/display 0770 system graphics
-    restorecon_recursive /persist
+
+    chown root system /persist
+    chmod 0771 /persist
 
     # Create NETMGR daemon socket area
     mkdir /dev/socket/netmgr 0750 radio radio
