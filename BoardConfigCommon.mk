@@ -51,6 +51,7 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/zuk/msm8996
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_PATH := /home/yaro/TTHD/toolchains/clang-8.x/bin
+ENABLE_CPUSETS := true
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8996
