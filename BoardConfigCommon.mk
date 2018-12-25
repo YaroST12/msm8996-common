@@ -175,6 +175,9 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_USES_MKE2FS := true
 
+# Power
+TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/touch/tp_dev/gesture_on"
+
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
