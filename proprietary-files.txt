@@ -550,9 +550,10 @@ vendor/lib/libvqzip.so|70451e720fb3d5697cf440432c430e3e39e0ad71
 # msm_irqbalance - from sailfish - PPR2.181005.003
 vendor/bin/msm_irqbalance|3f7a923d9d01dbfda40ebdfdd27a62167df69c13
 
-# Perf - from LA.UM.7.2.r1-04000-sdm660.0 - B2N_sprout:9/PPR1.180610.011/00WW_3_22C
-vendor/lib64/libqti-perfd-client.so|27fb8594f18ef41489b836d23a61eda4739424a7
-vendor/lib/libqti-perfd-client.so|1d42cdbbca693a637862d25644108ac0894bab7d
+# Perf - from taimen - PQ1A.190105.004
+vendor/etc/perf-profile0.conf|02204355bf29ceb0460cd53e6716552bb9d9b05f
+vendor/lib/libqti-perfd-client.so|f277daf9632b4d4c22a27abec2c4d0ccf776892d
+vendor/lib64/libqti-perfd-client.so|eaf678de5d7d0de194a263db1835b1f582452419
 
 # Peripheral manager
 vendor/bin/pm-proxy
