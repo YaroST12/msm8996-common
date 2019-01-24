@@ -412,16 +412,21 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <fqname>@2.0::IUceService/com.qualcomm.qti.uceservice</fqname>
     </hal>
     <hal format="hidl">
-        <name>com.qualcomm.qti.wifidisplayhal</name>
+        <name>com.quicinc.cne.api</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.1</version>
         <interface>
-            <name>IDSManager</name>
-            <instance>wifidisplaydshal</instance>
+            <name>IApiService</name>
+            <instance>cnd</instance>
         </interface>
+    </hal>
+    <hal format="hidl">
+        <name>com.quicinc.cne.server</name>
+        <transport>hwbinder</transport>
+        <version>2.1</version>
         <interface>
-            <name>IHDCPSession</name>
-            <instance>wifidisplayhdcphal</instance>
+            <name>IServer</name>
+            <instance>cnd</instance>
         </interface>
     </hal>
     <hal format="hidl">
