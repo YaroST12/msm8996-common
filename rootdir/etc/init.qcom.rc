@@ -399,6 +399,7 @@ service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqb
     user root
     group root
     writepid /dev/cpuset/system-background/tasks
+    disabled
 
 service atfwd /vendor/bin/ATFWD-daemon
     class late_start
