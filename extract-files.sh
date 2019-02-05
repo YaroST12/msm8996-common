@@ -93,4 +93,28 @@ sed -i "s|/bt_firmware|/vendor/btfw|g" "$BLOB_ROOT"/vendor/lib64/hw/android.hard
 sed -i "s|/data/vendor/misc/audio/acdbdata/delta/|/data/vendor/audio/acdbdata/delta/\x00\x00\x00\x00\x00|g" "$BLOB_ROOT"/vendor/lib/libaudcal.so
 sed -i "s|/data/vendor/misc/audio/acdbdata/delta/|/data/vendor/audio/acdbdata/delta/\x00\x00\x00\x00\x00|g" "$BLOB_ROOT"/vendor/lib64/libaudcal.so
 
+# Hex edit camera blobs to use /data/vendor/qcam
+sed -i "s|/data/misc/camera|/data/vendor/qcam|g" "$BLOB_ROOT"/vendor/bin/mm-qcamera-daemon
+sed -i "s|/data/misc/camera|/data/vendor/qcam|g" "$BLOB_ROOT"/vendor/lib/libmm-qcamera.so
+sed -i "s|/data/misc/camera|/data/vendor/qcam|g" "$BLOB_ROOT"/vendor/lib/libmmcamera2_cpp_module.so
+sed -i "s|/data/misc/camera|/data/vendor/qcam|g" "$BLOB_ROOT"/vendor/lib/libmmcamera2_iface_modules.so
+sed -i "s|/data/misc/camera|/data/vendor/qcam|g" "$BLOB_ROOT"/vendor/lib/libmmcamera2_imglib_modules.so
+sed -i "s|/data/misc/camera|/data/vendor/qcam|g" "$BLOB_ROOT"/vendor/lib/libmmcamera2_mct.so
+sed -i "s|/data/misc/camera|/data/vendor/qcam|g" "$BLOB_ROOT"/vendor/lib/libmmcamera2_pproc_modules.so
+sed -i "s|/data/misc/camera|/data/vendor/qcam|g" "$BLOB_ROOT"/vendor/lib/libmmcamera2_sensor_modules.so
+sed -i "s|/data/misc/camera|/data/vendor/qcam|g" "$BLOB_ROOT"/vendor/lib/libmmcamera2_stats_algorithm.so
+sed -i "s|/data/misc/camera|/data/vendor/qcam|g" "$BLOB_ROOT"/vendor/lib/libmmcamera2_stats_modules.so
+sed -i "s|/data/misc/camera|/data/vendor/qcam|g" "$BLOB_ROOT"/vendor/lib/libmmcamera_dbg.so
+sed -i "s|/data/misc/camera|/data/vendor/qcam|g" "$BLOB_ROOT"/vendor/lib/libmmcamera_hvx_grid_sum.so
+sed -i "s|/data/misc/camera|/data/vendor/qcam|g" "$BLOB_ROOT"/vendor/lib/libmmcamera_hvx_zzHDR.so
+sed -i "s|/data/misc/camera|/data/vendor/qcam|g" "$BLOB_ROOT"/vendor/lib/libmmcamera_imglib.so
+sed -i "s|/data/misc/camera|/data/vendor/qcam|g" "$BLOB_ROOT"/vendor/lib/libmmcamera_isp_mesh_rolloff44.so
+sed -i "s|/data/misc/camera|/data/vendor/qcam|g" "$BLOB_ROOT"/vendor/lib/libmmcamera_pdaf.so
+sed -i "s|/data/misc/camera|/data/vendor/qcam|g" "$BLOB_ROOT"/vendor/lib/libmmcamera_pdafcamif.so
+sed -i "s|/data/misc/camera|/data/vendor/qcam|g" "$BLOB_ROOT"/vendor/lib/libmmcamera_tintless_algo.so
+sed -i "s|/data/misc/camera|/data/vendor/qcam|g" "$BLOB_ROOT"/vendor/lib/libmmcamera_tintless_bg_pca_algo.so
+sed -i "s|/data/misc/camera|/data/vendor/qcam|g" "$BLOB_ROOT"/vendor/lib/libmmcamera_tuning.so
+
+sed -i "s|/data/vendor/camera/cam_socket%d|/data/vendor/qcam/camer_socket%d|g" "$BLOB_ROOT"/vendor/bin/mm-qcamera-daemon
+
 "$MY_DIR"/setup-makefiles.sh
